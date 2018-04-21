@@ -14,9 +14,9 @@ class ProjectTests(unittest.TestCase):
 	def tearDown(self):
 		pass
 
-	def test_main(self):
-		response = self.app.get('/api/v1/books')
-		self.assertIn(b'Hello Books', response.data)
+	def test_register(self):
+		response = self.app.get('/api/v1/auth/register')
+		self.assertIn(b'register new user', response.data)
 
 
 if __name__ == "__main__":
